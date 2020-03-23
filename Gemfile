@@ -23,8 +23,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # activate these gems
-  # gem 'better_errors' # render better error page
-  # gem 'binding_of_caller' # use irb on better_errors
+  gem 'better_errors' # render better error page
+  gem 'binding_of_caller' # use irb on better_errors
+  
   gem 'pry-rails' # use binding.pry
   gem 'pry-byebug' # use step over on binding.pry
   gem 'pry-doc' # extend pry document support

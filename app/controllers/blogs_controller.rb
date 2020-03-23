@@ -14,6 +14,7 @@ class BlogsController < ApplicationController
   def edit; end
 
   def create
+ 
     @blog = Blog.new(blog_params)
     if @blog.save
       redirect_to @blog, notice: 'Blog was successfully created.'
@@ -23,9 +24,11 @@ class BlogsController < ApplicationController
   end
 
   def update
+    # @blog.update_attributes(blog_params)
     if @blog.update(blog_params)
       redirect_to @blog, notice: 'Blog was successfully updated.'
     else
+      # @blog.attributes = params[:blog]
       render :edit
     end
   end
@@ -42,6 +45,6 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title)
+    params.require(:blog).permit(:title, :content)
   end
 end
