@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @blog.comments.create(comment_params)
-    redirect_to blog_path(@blog)
+    redirect_to blog_path(blog)
   end
 
   def destroy
