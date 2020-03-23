@@ -7,6 +7,10 @@
 `rails db:seed`  
 `rails server`  
 
+# Check All Bugs fixed
+
+`bundle exec rspec spec`
+
 ### System Versions
 
 * Ruby version  
